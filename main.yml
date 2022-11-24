@@ -1,0 +1,21 @@
+name: 'test-workflow-nilesh'
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '*/**'
+defaults:
+  run:
+    shell: bash    
+
+jobs:
+  terraform:
+    name: tf-script
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: teststep01
+        run: echo "hello world"
+
+    
